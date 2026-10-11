@@ -10,7 +10,7 @@ const baseUrl = codespaceName
   : 'http://localhost:8000';
 
 app.use(express.json());
-app.use('/api', resourceRoutes);
+app.use(resourceRoutes);
 
 app.get('/api/health', (_request, response) => {
   response.json({ status: 'ok' });
